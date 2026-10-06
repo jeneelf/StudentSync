@@ -1,0 +1,6 @@
+{
+  "name": "Nexus Study Companion",
+  "description": "Multi-course study companion with smart source uploads, cross-course concept linking, active recall flashcards, practice quizzes, and deadline planner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

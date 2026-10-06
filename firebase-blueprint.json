@@ -1,0 +1,63 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User profile document",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "courses": {
+      "title": "Course",
+      "description": "Course with study system components",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "semesterTerm": { "type": "string" },
+        "semesterYear": { "type": "number" },
+        "instructor": { "type": "string" },
+        "isArchived": { "type": "boolean" },
+        "syllabusUnits": { "type": "array", "items": { "type": "string" } },
+        "sources": { "type": "array" },
+        "notes": { "type": "array" },
+        "flashcards": { "type": "array" },
+        "quizzes": { "type": "array" },
+        "mastery": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "name"]
+    },
+    "deadlines": {
+      "title": "Study Deadline",
+      "description": "Syllabus deadlines and exam schedules",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "courseId": { "type": "string" },
+        "courseCode": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "weightPercent": { "type": "number" },
+        "priority": { "type": "string" },
+        "relatedTopics": { "type": "array", "items": { "type": "string" } },
+        "recommendedAction": { "type": "string" },
+        "completed": { "type": "boolean" }
+      },
+      "required": ["id", "userId", "title", "dueDate", "completed"]
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}
